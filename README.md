@@ -13,7 +13,7 @@ Follow these steps to install and set up the automatic clicker on Telegram:
 1. **Clone the Repository**
    ```sh
    git clone https://github.com/m4tinbeigi-official/AutoClickBot-RickGram
-   cd All-In-One
+   cd AutoClickBot-RickGram
    ```
 
 2. **Create and Activate a Virtual Environment**
