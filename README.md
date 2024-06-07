@@ -1,4 +1,4 @@
-# AutoClickBot-RickGram
+# All-In-One Automatic Clicker
 
 An automatic clicker for the (Hamster ~ TapSwap ~ Cex IO) bots.
 
@@ -12,8 +12,8 @@ Follow these steps to install and set up the automatic clicker on Telegram:
 
 1. **Clone the Repository**
    ```sh
-   git clone https://github.com/m4tinbeigi-official/AutoClickBot-RickGram
-   cd AutoClickBot-RickGram
+   git clone https://github.com/Poryaei/All-In-One
+   cd All-In-One
    ```
 
 2. **Create and Activate a Virtual Environment**
@@ -33,16 +33,13 @@ Follow these steps to install and set up the automatic clicker on Telegram:
    - Ensure you have the phone numbers for each account that will be used to operate the clicker.
 
 2. **Edit the Configuration File**
-```sh
-https://my.telegram.org/
-```
    - Open the `config.json` file and edit the necessary parameters.
    - Example `config.json`:
      ```json
      {
-         "api_id": 11111111,
-         "api_hash": "111111111111111111111111111111111",
-         "admin": 11111111,
+         "api_id": 8086441,
+         "api_hash": "2a305482a93b5a762d2acd4be90dd00f",
+         "admin": 0000000,
          "tapswap_clicker": "on",
          "hamster_clicker": "on",
          "cexio_clicker": "on",
@@ -58,6 +55,7 @@ https://my.telegram.org/
      - If you set any of the clickers (`tapswap_clicker`, `hamster_clicker`, `cexio_clicker`) to "off", the bot will not interact with that specific bot.
      - The `max_days_for_return` setting is for the Hamster bot. It specifies the maximum number of days it should take for a card to return its profit.
      - The `max_charge_level`, `max_energy_level`, and `max_tap_level` settings are for the TapSwap bot.
+     - Replace `cexio_ref_code` with your own referral code.
 
 ## Running the Script
 
@@ -94,4 +92,4 @@ For further assistance, please reach out to the project maintainer.
 
 ---
 
-This guide provides a comprehensive setup and usage manual for the **AutoClickBot-RickGram**. Make sure to follow each step carefully to ensure the tool functions correctly.
+This guide provides a comprehensive setup and usage manual for the **All-In-One Automatic Clicker**. Make sure to follow each step carefully to ensure the tool functions correctly.

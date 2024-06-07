@@ -24,10 +24,12 @@ class TapSwap:
             self.max_energy_level = 1
             self.max_tap_level    = 1
         
-        self.webappurl    = url
-        self.init_data    = urllib.parse.unquote(url).split('tgWebAppData=')[1].split('&tgWebAppVersion')[0]
-        self.x_cv         = "608"
-        self.access_token = ""
+        
+        self.webappurl         = url
+        self.init_data         = urllib.parse.unquote(url).split('tgWebAppData=')[1].split('&tgWebAppVersion')[0]
+        self.x_cv              = "615"
+        self.access_token      = ""
+        self.update_token_time = 0
         
         self.headers = {
             "accept": "*/*",
@@ -102,12 +104,16 @@ class TapSwap:
         return self.run_code_and_calculate_result(js_code)
 
     def get_auth_token(self):
+        
         payload = {
             "init_data": self.init_data,
             "referrer": ""
         }
         
-        maxtries = 5
+        if time.time() - self.update_token_time < 30*60:
+            return
+        
+        maxtries = 7
 
         while maxtries >= 0:
             try:
@@ -118,7 +124,14 @@ class TapSwap:
                     data=json.dumps(payload)
                 ).json()
                 
-                
+                if 'wait_s' in response:
+                    sleep_time = response["wait_s"]
+                    if sleep_time > 70:
+                        maxtries += 1
+                        continue
+                    self.logger.info(f'[+] Wating {round(sleep_time/10)} seconds to get auth token.')
+                    time.sleep(sleep_time/10)
+                    continue
                 
                 if 'chq' in response:
                     chq_result = self.extract_chq_result(response['chq'])
@@ -132,7 +145,11 @@ class TapSwap:
                     ).json()
                     
                 if not 'access_token' in response:
+                    
                     self.logger.warning("[!] There is no access_token in response")
+                    
+                    time.sleep(3)
+                    
                     continue
                         
                     
@@ -143,6 +160,8 @@ class TapSwap:
                 energy_level = response['player']['energy_level']
                 charge_level = response['player']['charge_level']
                 self._time_to_recharge = (energy_level*500) / charge_level
+                
+                self.update_token_time = time.time()
                 
                 try:
                     self.check_update(response)
@@ -318,7 +337,7 @@ class TapSwap:
             if boost['type'] == 'turbo' and boost['end'] > time.time():
                 for _ in range(random.randint(3, 7)):
                     
-                    taps = random.randint(84, 86)
+                    taps = random.randint(80, 86)
                     
                     sleepTime = self.sleep_time(taps)
                     
