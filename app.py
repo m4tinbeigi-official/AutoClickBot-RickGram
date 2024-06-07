@@ -47,7 +47,7 @@ client = TelegramClient(
     'sessions/bot',
     api_id,
     api_hash,
-    device_model=f"All-In-One V{VERSION}"
+    device_model=f"RickGram V{VERSION}"
 )
 
 client.start()
@@ -176,7 +176,7 @@ async def answer(event):
         _clicker_stats     = "ON 🟢" if db['click'] == 'on' else "OFF 🔴"
 
         await _sendMessage(f"""
-🤖 Welcome to All-In-One Collector Bot!
+🤖 Welcome to AutoClickBot-RickGram!
 Just a powerful clicker and non-stop bread 🚀
 
 
