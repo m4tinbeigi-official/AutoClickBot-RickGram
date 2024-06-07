@@ -33,6 +33,9 @@ Follow these steps to install and set up the automatic clicker on Telegram:
    - Ensure you have the phone numbers for each account that will be used to operate the clicker.
 
 2. **Edit the Configuration File**
+```sh
+https://my.telegram.org/
+```
    - Open the `config.json` file and edit the necessary parameters.
    - Example `config.json`:
      ```json
