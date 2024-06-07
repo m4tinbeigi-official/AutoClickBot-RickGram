@@ -195,7 +195,6 @@ Just a powerful clicker and non-stop bread 🚀
 🟣 `/help` - Display help menu
 🟣 `/balance` - Show balance
 🟣 `/stop` - Stop the robot
-🟣 `/url` - WebApp Url
 
 
 🐹 Special Hamster Commands:
