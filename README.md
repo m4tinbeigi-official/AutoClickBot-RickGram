@@ -1,4 +1,4 @@
-# All-In-One Automatic Clicker
+# AutoClickBot-RickGram
 
 An automatic clicker for the (Hamster ~ TapSwap ~ Cex IO) bots.
 
@@ -12,8 +12,8 @@ Follow these steps to install and set up the automatic clicker on Telegram:
 
 1. **Clone the Repository**
    ```sh
-   git clone https://github.com/Poryaei/All-In-One
-   cd All-In-One
+   git clone https://github.com/m4tinbeigi-official/AutoClickBot-RickGram
+   cd AutoClickBot-RickGram
    ```
 
 2. **Create and Activate a Virtual Environment**
@@ -37,21 +37,23 @@ Follow these steps to install and set up the automatic clicker on Telegram:
    - Example `config.json`:
      ```json
      {
-         "api_id": 8086441,
-         "api_hash": "2a305482a93b5a762d2acd4be90dd00f",
-         "admin": 0000000,
-         "tapswap_clicker": "on",
-         "hamster_clicker": "on",
-         "cexio_clicker": "on",
-         "auto_upgrade": true,
-         "max_days_for_return": 30,
-         "max_charge_level": 5,
-         "max_energy_level": 10,
-         "max_tap_level": 10
-     }
+    "api_id": 11111111,
+    "api_hash": "11111111111111111111111111111111",
+    "admin": 11111111111,
+    "tapswap_clicker": "on",
+    "hamster_clicker": "on",
+    "cexio_clicker": "on",
+    "auto_upgrade": true,
+    "max_days_for_return": 30,
+    "max_charge_level": 5,
+    "max_energy_level": 10,
+    "max_tap_level": 10,
+    "cexio_ref_code": "1716712060590401"
+}
+
      ```
    - **Note:** 
-     - Replace the value of `admin` with the numeric ID of the admin. You can get this ID by contacting [@chatIDrobot](https://t.me/chatIDrobot) on Telegram.
+     - Replace the value of `admin` with the numeric ID of the admin. You can get this ID by contacting [@userinfobot](https://t.me/userinfobot) on Telegram.
      - If you set any of the clickers (`tapswap_clicker`, `hamster_clicker`, `cexio_clicker`) to "off", the bot will not interact with that specific bot.
      - The `max_days_for_return` setting is for the Hamster bot. It specifies the maximum number of days it should take for a card to return its profit.
      - The `max_charge_level`, `max_energy_level`, and `max_tap_level` settings are for the TapSwap bot.
@@ -92,4 +94,4 @@ For further assistance, please reach out to the project maintainer.
 
 ---
 
-This guide provides a comprehensive setup and usage manual for the **All-In-One Automatic Clicker**. Make sure to follow each step carefully to ensure the tool functions correctly.
+This guide provides a comprehensive setup and usage manual for the **AutoClickBot-RickGram**. Make sure to follow each step carefully to ensure the tool functions correctly.
